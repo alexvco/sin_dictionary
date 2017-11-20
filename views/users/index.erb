@@ -3,6 +3,5 @@
 <ul>
 <% @users.each do |user| %>
   <li><a href="/users/<%= user.id %>"><%= user.email %></a></li>
-  <li><%= user.price %></li>
 <% end %>
 </ul>
