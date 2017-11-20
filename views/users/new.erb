@@ -1,0 +1,8 @@
+<form action="/users" method="post"role="form">
+ <div class="form-group">
+   <label for="user_email">Email:</label>
+   <br>
+   <input id="user_email" class="form-control" name="user[email]" type="text" value="<%= @user.email %>" />
+ </div>
+ <button type="submit" class="btn btn-success">Submit</button>
+</form> 

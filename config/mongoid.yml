@@ -1,0 +1,28 @@
+development:
+  clients:
+    default:
+      database: sin_dictionary_development
+      hosts:
+        - localhost:27017
+
+
+test:
+  clients:
+    default:
+      database: sin_dictionary_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: strong
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+    username: <%= ENV['MONGOHQ_USERNAME'] %>
+    password: <%= ENV['MONGOHQ_PASSWORD'] %>
+    database: p<%= ENV['DATABASE_URL'] %>
+    options:
+      skip_version_check: true
+      safe: true
+      consistency: strong
