@@ -1,0 +1,27 @@
+<h1>hello <%= session[:user_id] %></h1>
+
+<br>
+<% if session[:user_id] %>
+<a href="/users/sign_out" id="session_logout" data-method="delete" rel="nofollow" value="delete" class="btn btn-primary">Logout</a>
+<% end %>
+
+<script>
+  (function(){
+    $('#session_logout').on('click', function(e) {
+      e.preventDefault();
+      if (confirm('Are you sure?')) {
+        var form = document.createElement('form');
+        var formContent = "<input name='_method' type='hidden' value='delete' />";
+        formContent += "<input type='submit' />"; // Must trigger submit by click on a button, else "submit" event handler won't work!
+        form.innerHTML = formContent;
+        form.method = 'post';
+        form.action = this.href;
+        // form.target = this.target; // not necessary
+        form.style.display = 'none';
+        document.body.appendChild(form);
+        form.querySelector('[type="submit"]').click();
+        // console.log(form);
+      };
+    })
+  }());
+</script>

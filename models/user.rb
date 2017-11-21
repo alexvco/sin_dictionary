@@ -3,5 +3,6 @@ class User
   include Mongoid::Timestamps
 
   field :email, type: String
+  field :encrypted_password, type: String
 
 end

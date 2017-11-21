@@ -1,0 +1,16 @@
+<h1>Log in</h1>
+
+<form action="/users/sign_in" id="new_session" accept-charset="UTF-8" method="post">
+ <div class="form-group">
+   <label for="session_email">Email:</label>
+   <br>
+   <input id="session_email" class="form-control" name="session[email]" type="email"  />
+ </div>
+ <div class="form-group">
+   <label for="session_encrypted_password">Password:</label>
+   <br>
+   <input id="session_encrypted_password" name="session[encrypted_password]" class="form-control" type="password" />
+ </div>
+ <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
