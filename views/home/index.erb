@@ -1,7 +1,7 @@
-<h1>hello <%= session[:user_id] %></h1>
+<h1>hello <%= current_user.id if current_user %></h1>
 
 <br>
-<% if session[:user_id] %>
+<% if current_user %>
 <a href="/users/sign_out" id="session_logout" data-method="delete" rel="nofollow" value="delete" class="btn btn-primary">Logout</a>
 <% end %>
 
