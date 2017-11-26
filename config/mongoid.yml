@@ -1,10 +1,11 @@
 development:
+  options:
+    raise_not_found_error: false
   clients:
     default:
       database: sin_dictionary_development
       hosts:
         - localhost:27017
-
 
 test:
   clients:
@@ -14,6 +15,7 @@ test:
         - localhost:27017
       options:
         consistency: strong
+
 
 production:
   clients:

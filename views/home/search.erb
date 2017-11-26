@@ -1,0 +1,17 @@
+
+<h2>Enter the word to find the meaning:</h2>
+
+
+<form action="/search" method="post">
+  <input type="text" name="word" size="20" />
+  <input type="submit" value="Find" />
+</form>
+
+<br>
+
+<% if @match.present?  %>
+Meaning of <b><%= params[:word] %></b> is <b><%= @match.meaning %></b>
+<% elsif defined? @match and @match.nil?  %>
+Word <b><%= params[:word] %></b> not found in the dictionary
+<br>
+<% end %>

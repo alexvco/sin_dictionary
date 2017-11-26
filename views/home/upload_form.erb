@@ -1,0 +1,11 @@
+<%= @message if @message%>
+
+<h1>Upload the YAML dictionary file</h1>
+
+<br>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+<input type="file" name="uploadfile" />
+<br>
+<input type="submit" value="Upload" />
+</form>
